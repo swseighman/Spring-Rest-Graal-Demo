@@ -68,28 +68,28 @@ Edit the `pom.xml` file and uncomment the `build` section (lines 54-77):
 
 ```
 <build>
-	<plugins>
-		<plugin>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-maven-plugin</artifactId>
-		</plugin>
-		<plugin>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-maven-plugin</artifactId>
-			<configuration>
-				<image>
-					<builder>paketobuildpacks/builder:tiny</builder>
-					<env>
-						<BP_BOOT_NATIVE_IMAGE>true</BP_BOOT_NATIVE_IMAGE>
-						<BP_BOOT_NATIVE_IMAGE_BUILD_ARGUMENTS>
-							-Dspring.native.remove-yaml-support=true
-							-Dspring.spel.ignore=true
-						</BP_BOOT_NATIVE_IMAGE_BUILD_ARGUMENTS>
-					</env>
-				</image>
-			</configuration>
-		</plugin>
-	</plugins>
+   <plugins>
+      <plugin>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-maven-plugin</artifactId>
+         <configuration>
+            <image>
+               <builder>paketobuildpacks/builder:tiny</builder>
+               <env>
+                  <BP_BOOT_NATIVE_IMAGE>true</BP_BOOT_NATIVE_IMAGE>
+                  <BP_BOOT_NATIVE_IMAGE_BUILD_ARGUMENTS>
+                     -Dspring.native.remove-yaml-support=true
+                     -Dspring.spel.ignore=true
+                 </BP_BOOT_NATIVE_IMAGE_BUILD_ARGUMENTS>
+               </env>
+            </image>
+         </configuration>
+       </plugin>
+   </plugins>
 </build>
 ```
 
@@ -128,36 +128,36 @@ Edit the `pom.xml` file and uncomment the `profile` section (lines 79-109) and c
 
 ```
 <profiles>
-	<profile>
-		<id>native</id>
-		<build>
-		<plugins>
-		  <plugin>
-			<groupId>org.graalvm.nativeimage</groupId>
-				<artifactId>native-image-maven-plugin</artifactId>
-				<version>21.0.0</version>
-				<configuration>
-				  <mainClass>com.example.restservice.RestServiceApplication</mainClass>
-				  <imageName>graalvm-restservice</imageName>
-				  <buildArgs>-Dspring.native.remove-yaml-support=true -Dspring.spel.ignore=true</buildArgs>
-				</configuration>
-				<executions>
-				  <execution>
-					<goals>
-					  <goal>native-image</goal>
-					</goals>
-					<phase>package</phase>
-				  </execution>
-				</executions>
-			  </plugin>
-			  <plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			  </plugin>
-			</plugins>
-		  </build>
-		</profile>
-	</profiles>
+   <profile>
+      <id>native</id>
+      <build>
+         <plugins>
+            <plugin>
+            <groupId>org.graalvm.nativeimage</groupId>
+            <artifactId>native-image-maven-plugin</artifactId>
+            <version>21.0.0</version>
+            <configuration>
+                <mainClass>com.example.restservice.RestServiceApplication</mainClass>
+                <imageName>graalvm-restservice</imageName>
+                <buildArgs>-Dspring.native.remove-yaml-support=true -Dspring.spel.ignore=true</buildArgs>
+            </configuration>
+            <executions>
+               <execution>
+                  <goals>
+                     <goal>native-image</goal>
+                  </goals>
+                  <phase>package</phase>
+               </execution>
+            </executions>
+         </plugin>
+         <plugin>
+             <groupId>org.springframework.boot</groupId>
+             <artifactId>spring-boot-maven-plugin</artifactId>
+         </plugin>
+       </plugins>
+     </build>
+  </profile>
+</profiles>
 ```
 
 To build a container, execute this command:
