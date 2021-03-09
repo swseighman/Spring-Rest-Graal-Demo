@@ -1,4 +1,4 @@
-## Spring Boot Rest Demo with GraalVM
+## Spring Boot Rest Demo with GraalVM Native Image
     
 
 ![spring](images/spring.png)
