@@ -19,11 +19,14 @@ With this basic example, there are three options for building a Spring Boot nati
 $ git clone https://github.com/swseighman/Spring-Rest-Graal-Demo.git
 ```
 
+### Build a Native Image Executable
+
 To build a native image locally, execute this command:
 
 ![user input](images/userinput.png)
 
 ```
+$ cd Spring-Rest-Graal-Demo
 $ mvn -DskipTests -Pnative clean package
 ```
 
