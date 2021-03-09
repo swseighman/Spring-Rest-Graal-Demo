@@ -57,7 +57,7 @@ java -jar target/rest-service-0.0.1-SNAPSHOT.jar
 
 ### Building a container
 
-Once again, thee are two options available to demonstrating a container build:
+Once again, there are two options available to demonstrating a container build:
 
 * Using Spring Boot Maven Buildpacks support to generate a lightweight container containing a native executable
 * Using a multi-stage Dockerfile to build a container to generate a container containing a native executable
