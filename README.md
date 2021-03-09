@@ -133,28 +133,28 @@ Edit the `pom.xml` file and uncomment the `profile` section (lines 79-109) and c
       <build>
          <plugins>
             <plugin>
-            <groupId>org.graalvm.nativeimage</groupId>
-            <artifactId>native-image-maven-plugin</artifactId>
-            <version>21.0.0</version>
-            <configuration>
-                <mainClass>com.example.restservice.RestServiceApplication</mainClass>
-                <imageName>graalvm-restservice</imageName>
-                <buildArgs>-Dspring.native.remove-yaml-support=true -Dspring.spel.ignore=true</buildArgs>
-            </configuration>
-            <executions>
-               <execution>
-                  <goals>
-                     <goal>native-image</goal>
-                  </goals>
-                  <phase>package</phase>
-               </execution>
-            </executions>
-         </plugin>
-         <plugin>
-             <groupId>org.springframework.boot</groupId>
-             <artifactId>spring-boot-maven-plugin</artifactId>
-         </plugin>
-       </plugins>
+               <groupId>org.graalvm.nativeimage</groupId>
+               <artifactId>native-image-maven-plugin</artifactId>
+               <version>21.0.0</version>
+               <configuration>
+                  <mainClass>com.example.restservice.RestServiceApplication</mainClass>
+                  <imageName>graalvm-restservice</imageName>
+                  <buildArgs>-Dspring.native.remove-yaml-support=true -Dspring.spel.ignore=true</buildArgs>
+               </configuration>
+               <executions>
+                  <execution>
+                     <goals>
+                        <goal>native-image</goal>
+                     </goals>
+                     <phase>package</phase>
+                  </execution>
+               </executions>
+            </plugin>
+            <plugin>
+               <groupId>org.springframework.boot</groupId>
+               <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+         </plugins>
      </build>
   </profile>
 </profiles>
