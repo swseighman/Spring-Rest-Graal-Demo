@@ -15,6 +15,7 @@ With this basic Spring Boot REST example, we demonstrate three options for build
 
 ### Let's get started!
 
+First, clone the demo repository:
 ![user input](images/userinput.png)
 
 ```
@@ -22,6 +23,8 @@ $ git clone https://github.com/swseighman/Spring-Rest-Graal-Demo.git
 ```
 
 ### Build a Native Image Executable
+
+Note: This example uses Java 8, but Java 11 will work with some adjustments to the `Dockerfile` and `pom.xml`.
 
 To build a native image locally, execute this command:
 
@@ -74,7 +77,13 @@ graalvm-restservice     distro     3db75db72e1f   12 minutes ago   82.4MB
 $ docker run -p 8080:8080 graalvm-restservice:distro
 ```
 
-If you're _not_ using a Linux system, there are two options available for demonstrating a container build:
+If you're _not_ using a Linux system, you'll receive an error if you attempt to run the container:
+
+```
+standard_init_linux.go:219: exec user process caused: exec format error
+```
+
+If you're building on a Mac or Windows, there are two options available for demonstrating a container build:
 
 * Using Spring Boot Maven Buildpacks support to generate a lightweight container containing a native executable
 * Using a multi-stage Dockerfile to build a container to generate a container containing a native executable
