@@ -198,7 +198,7 @@ To build a container, execute this command:
 ![user input](images/userinput.png)
 
 ```
-$ docker build . -t graalvm-restservice:multi
+$ docker build . -t graalvm-restservice:multi .
 ```
 
 This will create a container using a multi-stage build process (feel free to examine the Dockerfile).  It will take a few minutes to build (3-5 minutes).
