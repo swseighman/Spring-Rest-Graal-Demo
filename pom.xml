@@ -51,7 +51,7 @@
 		</pluginRepository>
 	</pluginRepositories>
 
-	<!-- <build>
+	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -74,9 +74,9 @@
 				</configuration>
 			</plugin>
 		</plugins>
-	</build> -->
+	</build>
 
-	<profiles>
+	<!-- <profiles>
 		<profile>
 		  <id>native</id>
 		  <build>
@@ -106,5 +106,5 @@
 			</plugins>
 		  </build>
 		</profile>
-	  </profiles>
+	  </profiles> -->
 </project>
