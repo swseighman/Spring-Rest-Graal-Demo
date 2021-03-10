@@ -54,7 +54,7 @@ And you also could run the `jar` example:
 ![user input](images/userinput.png)
 
 ```
-java -jar target/rest-service-0.0.1-SNAPSHOT.jar
+$ java -jar target/rest-service-0.0.1-SNAPSHOT.jar
 ```
 
 
