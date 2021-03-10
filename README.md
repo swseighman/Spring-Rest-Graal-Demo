@@ -74,14 +74,14 @@ graalvm-restservice     distro     3db75db72e1f   12 minutes ago   82.4MB
 $ docker run -p 8080:8080 graalvm-restservice:distro
 ```
 
-If you're not using a Linux system, there are two options available for demonstrating a container build:
+If you're _not_ using a Linux system, there are two options available for demonstrating a container build:
 
 * Using Spring Boot Maven Buildpacks support to generate a lightweight container containing a native executable
 * Using a multi-stage Dockerfile to build a container to generate a container containing a native executable
 
-In the first example, we'll use buildpacks.
+In the first example, we'll use **[Buildpacks](https://paketo.io/)**.
 
-Edit the `pom.xml` file and uncomment the `build` section (lines 54-77):
+Edit the `pom.xml` file and uncomment the `build` section (lines 54-77) and comment the `profiles` section (lines 79-109):
 
 ```
 <build>
