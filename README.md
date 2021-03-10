@@ -1,15 +1,17 @@
-## Spring Boot Rest Demo with GraalVM Native Image
+## Spring Boot REST Demo with GraalVM Native Image
     
 
 ![spring](images/spring.png)
 
-With this basic example, there are three options for building a Spring Boot native application:
+With this basic Spring Boot REST example, we demonstrate three options for building a Spring Boot native application:
 
-* Using GraalVM native image Maven plugin support to generate a native executable
-* Using Spring Boot Maven Buildpacks support to generate a lightweight container containing a native executable
-* Using a multi-stage Dockerfile to build a container to generate a container containing a native executable
+* Using GraalVM **native image** **Maven plugin** support to generate a native executable
+* Using Spring Boot **Maven Buildpacks** support to generate a container running a native executable
+* Using a **multi-stage Dockerfile** to build a container to generate a container running a native executable
 
-**Note**: Throughout this tutorial, when you see a ![red computer](images/userinput.png) icon, it indicates a command that you'll need to enter in your terminal. ### CreditsThe contents of this tutorial is based on a Spring Native for GraalVM example [here](https://repo.spring.io/milestone/org/springframework/experimental/spring-graalvm-native-docs/0.8.5/spring-graalvm-native-docs-0.8.5.zip!/reference/index.html#_graalvm).
+**Note**: Throughout this exercise, when you see a ![red computer](images/userinput.png) icon, it indicates a command that you'll need to enter in your terminal. ### CreditsThe contents of this tutorial is based on a Spring Native for GraalVM example [here](https://repo.spring.io/milestone/org/springframework/experimental/spring-graalvm-native-docs/0.8.5/spring-graalvm-native-docs-0.8.5.zip!/reference/index.html#_graalvm).
+
+----
 
 ### Let's get started!
 
