@@ -144,7 +144,7 @@ rest-service            0.0.1-SNAPSHOT   aef518db86d9   41 years ago    79.3MB
 To run the container, execute:
 
 ```
-$ docker run -p 8080:8080 docker.io/library/rest-service:0.0.1-SNAPSHOT
+$ docker run -p 8080:8080 rest-service:0.0.1-SNAPSHOT
 ```
 Now that the service is up, visit **localhost:8080/greeting** or `curl` where you should see:
 
