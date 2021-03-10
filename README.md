@@ -57,9 +57,24 @@ And you also could run the `jar` example:
 java -jar target/rest-service-0.0.1-SNAPSHOT.jar
 ```
 
+
 ### Building a container
 
-Once again, there are two options available for demonstrating a container build:
+If you're on a Linux system, you can quickly build a container by copying the native image executable you just created in the steps above (see `Dockerfile.distroless`):
+
+```
+$ docker build -f Dockerfile.distroless -t graalvm-restservice:distro .
+```
+```
+$ docker images
+REPOSITORY              TAG        IMAGE ID       CREATED          SIZE
+graalvm-restservice     distro     3db75db72e1f   12 minutes ago   82.4MB
+```
+```
+$ docker run -p 8080:8080 graalvm-restservice:distro
+```
+
+If you're not using a Linux system, there are two options available for demonstrating a container build:
 
 * Using Spring Boot Maven Buildpacks support to generate a lightweight container containing a native executable
 * Using a multi-stage Dockerfile to build a container to generate a container containing a native executable
