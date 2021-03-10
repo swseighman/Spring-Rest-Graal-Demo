@@ -214,3 +214,6 @@ $ curl localhost:8080/greeting
 {"id":1,"content":"Hello, World!"}
 ```
 
+### Summary
+
+Congratulations! You successfully created a GraalVM native image executable and explored different options (buildpacks, native image Maven profile) for deploying the executable in a container. The `pom.xml` file is easily configurable and supports your different native image/container requirements and use cases. 
