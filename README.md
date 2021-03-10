@@ -182,7 +182,7 @@ To build a container, execute this command:
 ![user input](images/userinput.png)
 
 ```
-$ docker build . -t graalvm-restservice
+$ docker build . -t graalvm-restservice:multi
 ```
 
 This will create a container using a multi-stage build process (feel free to examine the Dockerfile).  It will take a few minutes to build (3-5 minutes).
@@ -194,7 +194,7 @@ Check that the image is available:
 ```
 $ docker images
 REPOSITORY              TAG           IMAGE ID           CREATED          SIZE
-graalvm-restservice     latest        d4d1cdc7a246       9 minutes ago    81.2MB
+graalvm-restservice     multi        d4d1cdc7a246       9 minutes ago    81.2MB
 ```
 
 Then you can run the container:
@@ -202,7 +202,7 @@ Then you can run the container:
 ![user input](images/userinput.png)
 
 ```
-$ docker run -p 8080:8080 graalvm-restservice
+$ docker run -p 8080:8080 graalvm-restservice:multi
 ```
 
 Now that the service is up, visit **localhost:8080/greeting** or `curl` where you should see:
