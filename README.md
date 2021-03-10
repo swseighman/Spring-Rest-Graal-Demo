@@ -26,6 +26,13 @@ $ git clone https://github.com/swseighman/Spring-Rest-Graal-Demo.git
 
 Note: This example uses Java 8, but Java 11 will work with some adjustments to the `Dockerfile` and `pom.xml`.
 
+```
+$ java -version
+java version "1.8.0_281"
+Java(TM) SE Runtime Environment (build 1.8.0_281-b09)
+Java HotSpot(TM) 64-Bit Server VM GraalVM EE 21.0.0 (build 25.281-b09-jvmci-21.0-b06, mixed mode)
+```
+
 To build a native image locally, execute this command:
 
 ![user input](images/userinput.png)
